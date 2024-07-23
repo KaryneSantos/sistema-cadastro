@@ -78,6 +78,8 @@ router.post('/', (req, res) => {
             errors.server = 'Erro ao registrar usuário';
             return;
         }
+
+        errors.server = "Usuário cadastrado com sucesso.";
         console.log('Usuário registrado com sucesso');
     });
 });
