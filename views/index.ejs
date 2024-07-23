@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-titulo">
+            <h1>Cadastrar</h1>
+        </div>
+        <div class="formulario">
+            <form action="/" method="post">
+                <div class="form-group">
+                    <div class="form-input">
+                        <label for="nome-completo">Nome completo</label>
+                        <input type="text" name="nome_completo" id="nome_completo">
+                        <div class="error" id="error-nome"><%= errors.nome %></div>
+                    </div>
+                    <div class="form-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                        <div class="error" id="error-email"><%= errors.email %></div>
+                    </div>
+                    <div class="form-input">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha">
+                        <div class="error" id="error-senha"><%= errors.senha %></div>
+                    </div>
+                    <div class="form-input">
+                        <label for="conf-senha">Confirmação de senha</label>
+                        <input type="password" name="conf_senha" id="conf_senha">
+                        <div class="error" id="error-conf-senha"><%= errors.conf_senha %></div>
+                    </div>
+                    <div class="form-genero">
+                        <div class="genero-titulo">
+                            <h6>Gênero</h6>
+                        </div>
+                        <div class="genero-input">
+                            <input type="radio" name="genero" value="feminino" id="feminino">
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div class="genero-input">
+                            <input type="radio" name="genero" value="masculino" id="masculino">
+                            <label for="masculino">Masculino</label>
+                        </div>
+                        <div class="genero-input">
+                            <input type="radio" name="genero" value="outros" id="outros">
+                            <label for="outros">Outros</label>
+                        </div>
+                        <div class="genero-input">
+                            <input type="radio" name="genero" value="none" id="none">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                        <div class="error" id="error-genero"><%= errors.genero %></div>
+                    </div>
+                </div>
+                <div class="formulario-confirmar">
+                    <button type="submit" id="cadastrar">Cadastrar</button>
+                    <div class="error"></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
